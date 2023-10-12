@@ -1,0 +1,14 @@
+sort1 uses: Bubble Sort
+
+How do you know?:
+Bubble Sort has a faster running time when the list is sorted because of it's ability to abort, and when running sorted lists, it had a faster running time.
+
+sort2 uses: Merge Sort
+
+How do you know?: 
+Because sort2 had the fastest running time mostly, keeping a steady running time, it therefore was mimicking the characteristics of a Merge Sort. This has led me to believe that sort2 uses merge sort.
+
+sort3 uses: Selection Sort
+
+How do you know?: 
+With the other two sorting functions already defined as Bubble and Merge Sort, the only other possibility would be Selection Sort. With that and some other evidence, this has led me to conclude that this must be selection sort.

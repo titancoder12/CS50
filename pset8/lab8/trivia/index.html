@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3 id="part1">What is the largest country in the world?</h3>
+                <h3 id="correctChoice" hidden style="background-color:Green;">Correct!</h3>
+                <h3 id="incorrectChoice" hidden style="background-color:Red;">Incorrect</h3>
+
+                <button id="canada" type="button">Canada</button>
+                <button id="us" type="button">United States</button>
+                <button id="china" type="button">China</button>
+                <button id="russia" type="button">Russia</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3 id="part2">In which year did 'The Simpsons' begin broadcasting?</h3>
+
+                <h3 id="correctForm" hidden style="background-color:Green;">Correct!</h3>
+                <h3 id="incorrectForm" hidden style="background-color:Red;">Incorrect</h3>
+                <form>
+                    <input autocomplete="off" id="input" type="text">
+                    <input type="submit" value="Check Answer">
+                </form>
+                <script>
+                function checkForm()
+                {
+                    //var part2 = document.getElementById('part2');
+                    //var part1 = document.getElementById('part1');
+                    let input = document.getElementById('input').value;
+                    if (input === "1989")
+                    {
+                        unhideForm("correct");
+                        document.getElementById('input').style.backgroundColor = "green";
+                    }
+                    else
+                    {
+                        unhideForm("incorrect");
+                        document.getElementById('input').style.backgroundColor = "red";
+                    }
+                    return false;
+                }
+
+                function unhideForm(status)
+                {
+                    const correct = document.getElementById('correctForm');
+                    const incorrect = document.getElementById('incorrectForm');
+                    if (status == "correct")
+                    {
+                        correct.style.display = "block";
+                    }
+                    if (status == "incorrect")
+                    {
+                        incorrect.style.display = "block";
+                    }
+                    return false;
+                }
+
+                function unhideChoice(status)
+                {
+                    var correct = document.getElementById('correctChoice');
+                    var incorrect = document.getElementById('incorrectChoice');
+                    if (status === "correct")
+                    {
+                        if (incorrect.style.display == "block")
+                        {
+                            incorrect.style.display = "none";
+                        }
+                        correct.style.display = "block";
+                    }
+
+                    if (status === "incorrect")
+                    {
+                        if (correct.style.display == "block")
+                        {
+                            correct.style.display = "none";
+                        }
+                        incorrect.style.display = "block"
+                    }
+                    return false;
+                }
+
+                const canada = document.querySelector('#canada');
+                const us = document.querySelector('#us');
+                const china = document.querySelector('#china');
+                const russia = document.querySelector('#russia');
+
+
+                document.querySelector('#canada').addEventListener('click', function(){document.querySelector('#canada').style.backgroundColor = "red"; unhideChoice("incorrect");});
+                document.querySelector('#us').addEventListener('click', function(){document.querySelector('#us').style.backgroundColor = "red"; unhideChoice("incorrect");});
+                document.querySelector('#china').addEventListener('click', function(){document.querySelector('#china').style.backgroundColor = "red"; unhideChoice("incorrect");});
+                document.querySelector('#russia').addEventListener('click', function(){document.querySelector('#russia').style.backgroundColor = "green"; unhideChoice("correct");});
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

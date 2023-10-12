@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link href="styles.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My Homepage</title>
+    </head>
+    <body>
+        <div id="alert" class="alert alert-success alert-dismissible fade show in text-center" role="alert">
+            <strong>Like my homepage?</strong> Check out my other pages <a href="https://www.lipsum.com/feed/html">here</a>.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        <div class="header">
+            <h1>My Homepage!</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="hobbies.html">My Hobbies and Intrests</a></li>
+                    <li><a id="schoollife" href="schoollife.html">My School Life</a></li>
+                    <li><a href="https://cs50.harvard.edu/x/">CS50</a></li>
+                </ul>
+        </div>
+        <h4>My School Life</h4>
+        <p>I am homeschooled, so I can get school time for more specific subjects such as computer science, piano, and violin.</p>
+        <p>We left the school system two years ago, when covid hit. Since then I think I have learned a lot more and have been doing better in school.</p>
+        <script>
+        document.getElementById('schoollife').style.backgroundColor = "red";
+        document.querySelector('#cs50').addEventListener('click', function(){alert("You are currently being redirected to https://www.harvard.cs50.com. Homepage is not responsible for the website.")});
+        </script>
+    </body>
+</html>

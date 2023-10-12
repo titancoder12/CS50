@@ -1,0 +1,46 @@
+/* Colors for brand */
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+}
+nav .navbar-brand .yellow
+{
+    color: #f5b82e;
+}
+nav .navbar-brand .green
+{
+    color: #2e944b;
+}
+nav .navbar-brand .neon
+{
+    color: rgb(59, 154, 18);
+}
+h1
+{
+    text-align: center;
+}
+h2
+{
+    text-align:center;
+}
+table {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+table th,
+table td {
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+hr 
+{
+    background-color:black; 
+    border:none; 
+    height:1px; 
+    margin:0px;
+}
